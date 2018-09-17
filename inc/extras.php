@@ -212,3 +212,31 @@ function lagom_theme_register_required_plugins() {
 
 	lagom( $plugins, $config );
 }
+
+
+// Adds Bootstrap to navigation
+
+// Adds active class to nav
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
+// Adds custom class to nav
+
+function lagom_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'menu-1') {
+    $classes[] = 'nav-link';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'lagom_menu_classes', 1, 3);
+
+function add_menuclass($ulclass) {
+   return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');

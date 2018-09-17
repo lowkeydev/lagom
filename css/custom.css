@@ -1,0 +1,98 @@
+
+
+/*--------------------------------------------------------------
+>>> Custom CSS */
+
+
+/* Module CSS */
+
+.module-section {
+	position: relative;
+}
+
+
+/* Slider Module CSS */
+
+
+.slick-slider-content {
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+	z-index: 99;
+}
+
+.slick-slider-content h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.slick-slider-content .slider-btn1 a, .slick-slider-content .slider-btn2 a{
+	text-align: center;
+	color: #fff;
+	padding: 15px;
+	background: #000;
+}
+
+.slick-slide img {
+	height: 600px;
+	object-fit: cover;
+}
+
+.slick-slider-content .slider-btn1 , .slick-slider-content .slider-btn2 {
+	margin: 20px 0px;
+}
+
+
+/* Banner Module CSS */
+
+.banner-img {
+	    height: 600px;
+   background-size: cover;
+	width: 100%;
+}
+
+.banner-content {
+	width: 100%;
+    position: absolute;
+    top: 21%;
+    left: 0%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+	z-index: 99;
+}
+
+
+.banner-content h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.banner-content .slider-btn1 a,.banner-content .slider-btn2 a{
+	text-align: center;
+	color: #fff;
+	padding: 15px;
+	background: #000;
+}
+
+/* Testimonials CSS */
+
+.testimonials {
+	    padding: 100px 0px;
+    background: #eee;
+}
+
+
+/* Header Module CSS */
+
+.header-modules {
+	background: #1B4181;
+}
