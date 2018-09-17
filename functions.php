@@ -120,7 +120,23 @@ add_action( 'widgets_init', 'lagom_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lagom_scripts() {
-	wp_enqueue_style( 'lagom-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'lagom-custom-style', get_template_directory_uri() . '/css/custom.css' );
+
+	wp_enqueue_style( 'lagom-bootstrap-grid', get_template_directory_uri() . '/css/bootstrap-grid.min.css' );
+
+	wp_enqueue_style( 'lagom-bootstrap-reset', get_template_directory_uri() . '/css/bootstrap-reboot.min.css' );
+
+	wp_enqueue_style( 'lagom-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
+
+	wp_enqueue_style( 'lagom-theme-css', get_template_directory_uri() . '/css/general.css' );
+
+	wp_deregister_script('jquery');
+
+	$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
+
+	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '09172018', true);
+
+	wp_enqueue_script( 'lagom-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '09172018', true );
 
 	wp_enqueue_script( 'lagom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
